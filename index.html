@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <div class="card">
+        <h1 class="brand">Weather</h1>
+
+        <div class="search">
+          <input id="cityInput" type="search" placeholder="Enter city name" aria-label="City name" />
+          <button id="searchBtn">Search</button>
+        </div>
+
+        <div class="controls">
+          <div class="unit-toggle">
+            <label>
+              <input id="unitToggle" type="checkbox" />
+              <span class="toggle-text">Show °F</span>
+            </label>
+          </div>
+          <div id="loading" class="loading" hidden>Loading...</div>
+        </div>
+
+        <div id="error" class="error" hidden></div>
+
+        <section id="weatherCard" class="weather" hidden>
+          <div class="city" id="cityName">—</div>
+          <div class="row">
+            <div class="temp" id="temperature">—</div>
+            <div class="desc" id="description">—</div>
+          </div>
+          <div class="meta">
+            <div>Humidity: <span id="humidity">—</span></div>
+            <div>Wind: <span id="wind">—</span></div>
+          </div>
+        </section>
+
+        <footer class="credit">Powered by Open-Meteo</footer>
+      </div>
+    </main>
+
+    <script src="app.js" defer></script>
+  </body>
+</html>
